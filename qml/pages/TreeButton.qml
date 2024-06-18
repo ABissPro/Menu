@@ -29,19 +29,36 @@ Item {
         MenuItem {
             text: "Ввести диаметр"
             onClicked: {
-                diameterInputDialog.open()
+               var dialog = pageStack.push(Qt.resolvedUrl("DiameterInputDialog.qml"),
+                                            {"diameter": header.title})
+               dialog.accepted.connect(function() {
+                   header.title = "Диаметр: " + dialog.diameter
+                     })
+
+                //diameterInputDialog.open()
             }
         }
+
         MenuItem {
             text: "Ввести высоту"
             onClicked: {
-                heightInputDialog.open()
+                var dialog = pageStack.push(Qt.resolvedUrl("HeightInputDialog.qml"),
+                                             {"height": header.title})
+                dialog.accepted.connect(function() {
+                    header.title = "Высота: " + dialog.height
+                      })
+                //heightInputDialog.open()
             }
         }
         MenuItem {
             text: "Выбрать породу"
             onClicked: {
-                breedSelectionDialog.open()
+                var dialog = pageStack.push(Qt.resolvedUrl("BreedSelectionDialog.qml"),
+                                             {"breed": header.title})
+                dialog.accepted.connect(function() {
+                    header.title = "Порода: " + dialog.breed
+                      })
+                //breedSelectionDialog.open()
             }
         }
     }

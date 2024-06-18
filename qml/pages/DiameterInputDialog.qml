@@ -32,6 +32,7 @@ Dialog {
                     accepted(diameter)
                     dialog.close()
                 }
+
             }
         }
     }

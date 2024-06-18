@@ -11,9 +11,9 @@ SOURCES += \
 HEADERS += \
 
 DISTFILES += \
-    TreeData \
+    TreeData.txt \
     qml/pages/BreedSelectionDialog.qml \
-    qml/pages/DiametInputDialog.qml \
+    qml/pages/DiameterInputDialog.qml \
     qml/pages/HeightInputDialog.qml \
     qml/pages/TreeButton.qml \
     rpm/ru.template.Menu.spec \
