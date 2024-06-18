@@ -21,6 +21,7 @@ Item {
             onClicked: {
                 contextMenu.open()
             }
+
         }
     }
 
@@ -32,10 +33,16 @@ Item {
                var dialog = pageStack.push(Qt.resolvedUrl("DiameterInputDialog.qml"),
                                             {"diameter": header.title})
                dialog.accepted.connect(function() {
-                   header.title = "Диаметр: " + dialog.diameter
+                   text = "Диаметр: " + dialog.diameter
                      })
-
                 //diameterInputDialog.open()
+            }
+            onDelayedClick: {
+                var dialog = pageStack.push(Qt.resolvedUrl("DiameterInputDialog.qml"),
+                                             {"diameter": header.title})
+                dialog.accepted.connect(function() {
+                    circle.radius = dialog.diameter/1.5
+                      })
             }
         }
 
@@ -45,7 +52,7 @@ Item {
                 var dialog = pageStack.push(Qt.resolvedUrl("HeightInputDialog.qml"),
                                              {"height": header.title})
                 dialog.accepted.connect(function() {
-                    header.title = "Высота: " + dialog.height
+                    text = "Высота: " + dialog.height
                       })
                 //heightInputDialog.open()
             }
@@ -56,76 +63,53 @@ Item {
                 var dialog = pageStack.push(Qt.resolvedUrl("BreedSelectionDialog.qml"),
                                              {"breed": header.title})
                 dialog.accepted.connect(function() {
-                    header.title = "Порода: " + dialog.breed
+                    text = "Порода: " + dialog.breed
                       })
                 //breedSelectionDialog.open()
             }
-        }
-    }
+            onDelayedClick: {
+                var dialog = pageStack.push(Qt.resolvedUrl("BreedSelectionDialog.qml"),
+                                             {"breed": header.title})
+                dialog.accepted.connect(function setBreed(newBreed) {
 
-    Dialog {
-        id: diameterInputDialog
-        accepted: function (newDiameter) {
-            tree.diameter = newDiameter
-            saveTreeData()
+                        breed = newBreed
+                        switch (newBreed) {
+                            case "Осина":
+                                circle.color = "lightgreen"
+                                break;
+                            case "Береза":
+                                circle.color = "blue"
+                                break;
+                            case "Дуб":
+                                circle.color = "grey"
+                                break;
+                            case "Сосна":
+                                circle.color = "orange"
+                                break;
+                            case "Ель":
+                                circle.color = "purple"
+                                break;
+                            case "Лиственница":
+                                circle.color = "green"
+                                break;
+                        }
+                    })
+            }
         }
+        Button {
+            text: qsTr("Сохранить")
+            onClicked: {
 
-        DiametInputDialog {
-            onAccepted: diameterInputDialog.accepted
+                contextMenu.close()
+            }
+
         }
-    }
-
-    Dialog {
-        id: heightInputDialog
-        accepted: function (newHeight) {
-            tree.height = newHeight
-            saveTreeData()
+        onClosed: {
+            function saveTreeData() {
+                var file = Qt.openFileHandle("TreeData.txt", "a")
+                file.writeLine("Tree: " + breed + ", Diameter: " + diameter + ", Height: " + height)
+                file.close()
+            }
         }
-
-        HeightInputDialog {
-            onAccepted: heightInputDialog.accepted
-        }
-    }
-
-    Dialog {
-        id: breedSelectionDialog
-        accepted: function (newBreed) {
-            setBreed(newBreed)
-            saveTreeData()
-        }
-
-        BreedSelectionDialog {
-            onAccepted: breedSelectionDialog.accepted
-        }
-    }
-
-    function setBreed(newBreed) {
-        breed = newBreed
-        switch (newBreed) {
-            case "Осина":
-                circle.color = "lightgreen"
-                break;
-            case "Береза":
-                circle.color = "blue"
-                break;
-            case "Дуб":
-                circle.color = "grey"
-                break;
-            case "Сосна":
-                circle.color = "orange"
-                break;
-            case "Ель":
-                circle.color = "purple"
-                break;
-            case "Лиственница":
-                circle.color = "green"
-                break;
-        }
-    }
-
-    function saveTreeData() {
-        var file = Qt.openFileHandle("TreeData.txt", "a")
-        file.writeLine("Tree: " + breed + ", Diameter: " + diameter + ", Height: " + height)
-        file.close()
-    }
+    }   
 }
