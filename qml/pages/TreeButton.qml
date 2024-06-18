@@ -3,11 +3,11 @@ import Sailfish.Silica 1.0
 
 Item {
     id: tree
-    implicitWidth: 50
-    implicitHeight: 50
+    width: 90
+    height: 90
     property string breed: "Осина"
     property real diameter: 0
-    property real height: 0
+    property real tall: 0
 
     Rectangle {
         id: circle
@@ -49,10 +49,10 @@ Item {
         MenuItem {
             text: "Ввести высоту"
             onClicked: {
-                var dialog = pageStack.push(Qt.resolvedUrl("HeightInputDialog.qml"),
-                                             {"height": header.title})
+                var dialog = pageStack.push(Qt.resolvedUrl("TallInputDialog.qml"),
+                                             {"tall": header.title})
                 dialog.accepted.connect(function() {
-                    text = "Высота: " + dialog.height
+                    text = "Высота: " + dialog.tall
                       })
                 //heightInputDialog.open()
             }
@@ -107,7 +107,7 @@ Item {
         onClosed: {
             function saveTreeData() {
                 var file = Qt.openFileHandle("TreeData.txt", "a")
-                file.writeLine("Tree: " + breed + ", Diameter: " + diameter + ", Height: " + height)
+                file.writeLine("Порода: " + breed + ", диаметр: " + diameter + ", высота: " + tall)
                 file.close()
             }
         }

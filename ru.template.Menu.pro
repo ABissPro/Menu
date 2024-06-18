@@ -14,7 +14,7 @@ DISTFILES += \
     TreeData.txt \
     qml/pages/BreedSelectionDialog.qml \
     qml/pages/DiameterInputDialog.qml \
-    qml/pages/HeightInputDialog.qml \
+    qml/pages/TallInputDialog.qml \
     qml/pages/TreeButton.qml \
     rpm/ru.template.Menu.spec \
 

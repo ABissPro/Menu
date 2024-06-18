@@ -78,29 +78,15 @@
     </message>
 </context>
 <context>
-    <name>DiametInputDialog</name>
+    <name>DiameterInputDialog</name>
     <message>
-        <location filename="../qml/pages/DiametInputDialog.qml" line="12"/>
-        <location filename="../qml/pages/DiametInputDialog.qml" line="21"/>
+        <location filename="../qml/pages/DiameterInputDialog.qml" line="12"/>
+        <location filename="../qml/pages/DiameterInputDialog.qml" line="21"/>
         <source>Введите диаметр</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DiametInputDialog.qml" line="30"/>
-        <source>Сохранить</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>HeightInputDialog</name>
-    <message>
-        <location filename="../qml/pages/HeightInputDialog.qml" line="12"/>
-        <location filename="../qml/pages/HeightInputDialog.qml" line="21"/>
-        <source>Введите высоту</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/HeightInputDialog.qml" line="30"/>
+        <location filename="../qml/pages/DiameterInputDialog.qml" line="30"/>
         <source>Сохранить</source>
         <translation type="unfinished"></translation>
     </message>
@@ -111,6 +97,28 @@
         <location filename="../qml/pages/MainPage.qml" line="10"/>
         <source>Menu</source>
         <translation>Menu</translation>
+    </message>
+</context>
+<context>
+    <name>TallInputDialog</name>
+    <message>
+        <location filename="../qml/pages/TallInputDialog.qml" line="12"/>
+        <location filename="../qml/pages/TallInputDialog.qml" line="21"/>
+        <source>Введите высоту</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/TallInputDialog.qml" line="30"/>
+        <source>Сохранить</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TreeButton</name>
+    <message>
+        <location filename="../qml/pages/TreeButton.qml" line="100"/>
+        <source>Сохранить</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

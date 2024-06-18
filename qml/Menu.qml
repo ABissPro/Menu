@@ -3,7 +3,7 @@ import Sailfish.Silica 1.0
 
 import "pages"
 
-Page {
+ApplicationWindow {
     id: mainPage
 
     property var trees: []
@@ -16,7 +16,7 @@ Page {
             id: field
             width: flickable.width
             height: flickable.height
-            color: "lightgrey"
+            color: "darkgrey"
 
             MouseArea {
                 anchors.fill: parent
@@ -36,7 +36,7 @@ Page {
 
             Repeater {
                 model: trees
-                delegate: modelData
+                delegate: TreeButton
             }
         }
     }

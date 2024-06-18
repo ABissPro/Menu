@@ -3,9 +3,9 @@
         <file>Menu.qml</file>
         <file>pages/AboutPage.qml</file>
         <file>pages/BreedSelectionDialog.qml</file>
-        <file>pages/DiametInputDialog.qml</file>
-        <file>pages/HeightInputDialog.qml</file>
         <file>pages/MainPage.qml</file>
         <file>pages/TreeButton.qml</file>
+        <file>pages/DiameterInputDialog.qml</file>
+        <file>pages/TallInputDialog.qml</file>
     </qresource>
 </RCC>
