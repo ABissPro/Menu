@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>pages/AboutPage.qml</file>
+        <file>pages/BreedSelectionDialog.qml</file>
+        <file>pages/DiametInputDialog.qml</file>
+        <file>pages/HeightInputDialog.qml</file>
+        <file>pages/MainPage.qml</file>
+        <file>pages/TreeButton.qml</file>
+        <file>Menu.qml</file>
+    </qresource>
+</RCC>

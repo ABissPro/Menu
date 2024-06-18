@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.template.Menu
+Exec=/usr/bin/ru.template.Menu
+Name=Menu
+Name[ru]=Меню
+
+[X-Application]
+Permissions=Sensors;Documents;Location
+OrganizationName=ru.template
+ApplicationName=Menu
+ExecDBus=/usr/bin/ru.template.Menu
