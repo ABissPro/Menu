@@ -7,7 +7,7 @@ Name=Menu
 Name[ru]=Меню
 
 [X-Application]
-Permissions=Sensors;Documents;Location
+Permissions=Documents
 OrganizationName=ru.template
 ApplicationName=Menu
 ExecDBus=/usr/bin/ru.template.Menu

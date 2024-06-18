@@ -1,7 +1,7 @@
 import QtQuick 2.2
 import Sailfish.Silica 1.0
 
-import "../qml/pages/TreeButton.qml" as TreeButton
+import "pages"
 
 Page {
     id: mainPage

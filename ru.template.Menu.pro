@@ -27,4 +27,4 @@ TRANSLATIONS += \
     translations/ru.template.Menu-ru.ts \
 
 RESOURCES += \
-    qml/resorces.qrc
+    qml/resources.qrc
