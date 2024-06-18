@@ -3,8 +3,8 @@ import Sailfish.Silica 1.0
 
 Item {
     id: tree
-    width: 50
-    height: 50
+    implicitWidth: 50
+    implicitHeight: 50
     property string breed: "Осина"
     property real diameter: 0
     property real height: 0
