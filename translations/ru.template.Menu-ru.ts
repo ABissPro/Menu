@@ -80,13 +80,13 @@
 <context>
     <name>DiameterInputDialog</name>
     <message>
-        <location filename="../qml/pages/DiameterInputDialog.qml" line="12"/>
-        <location filename="../qml/pages/DiameterInputDialog.qml" line="21"/>
+        <location filename="../qml/pages/DiameterInputDialog.qml" line="11"/>
+        <location filename="../qml/pages/DiameterInputDialog.qml" line="20"/>
         <source>Введите диаметр</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/DiameterInputDialog.qml" line="30"/>
+        <location filename="../qml/pages/DiameterInputDialog.qml" line="29"/>
         <source>Сохранить</source>
         <translation type="unfinished"></translation>
     </message>
@@ -102,13 +102,13 @@
 <context>
     <name>TallInputDialog</name>
     <message>
-        <location filename="../qml/pages/TallInputDialog.qml" line="12"/>
-        <location filename="../qml/pages/TallInputDialog.qml" line="21"/>
+        <location filename="../qml/pages/TallInputDialog.qml" line="11"/>
+        <location filename="../qml/pages/TallInputDialog.qml" line="20"/>
         <source>Введите высоту</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/TallInputDialog.qml" line="30"/>
+        <location filename="../qml/pages/TallInputDialog.qml" line="29"/>
         <source>Сохранить</source>
         <translation type="unfinished"></translation>
     </message>
@@ -116,7 +116,7 @@
 <context>
     <name>TreeButton</name>
     <message>
-        <location filename="../qml/pages/TreeButton.qml" line="100"/>
+        <location filename="../qml/pages/TreeButton.qml" line="101"/>
         <source>Сохранить</source>
         <translation type="unfinished"></translation>
     </message>

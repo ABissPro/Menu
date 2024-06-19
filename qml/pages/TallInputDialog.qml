@@ -1,12 +1,11 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
 
+
 Dialog {
-    id: heightInputDialog
+    id: tallInputDialog
 
-    signal accepted(real height)
-
-    property real height: 0
+    property real tall: 0
 
     PageHeader {
         title: qsTr("Введите высоту")
@@ -17,22 +16,23 @@ Dialog {
         Column {
             spacing: 10
             TextField {
-                id: inputHeight
+                id: inputTall
                 placeholderText: qsTr("Введите высоту")
                 onTextChanged: {
-                    var newHeight = parseFloat(inputHeight.text)
-                    if (!isNaN(newHeight)) {
-                        height = newHeight
+                    var newTall = parseFloat(inputTall.text)
+                    if (!isNaN(newTall)) {
+                        tall = newTall
                     }
                 }
             }
             Button {
                 text: qsTr("Сохранить")
                 onClicked: {
-                    accepted(height)
-                    dialog.close()
+                    accepted(tall)
+                    close()
                 }
             }
         }
     }
-}
+  }
+

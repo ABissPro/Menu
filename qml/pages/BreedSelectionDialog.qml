@@ -1,10 +1,10 @@
-import QtQuick 2.0
+import QtQuick 2.2
 import Sailfish.Silica 1.0
+
 
 Dialog {
     id: breedSelectionDialog
-
-    signal accepted(string breed)
+    property string breed: "Осина"
 
     PageHeader {
         title: qsTr("Выберите породу")
@@ -17,45 +17,46 @@ Dialog {
             Button {
                 text: qsTr("Осина")
                 onClicked: {
-                    accepted("Осина")
-                    dialog.close()
+                    accepted(breed = "Осина")
+                    close()
                 }
             }
             Button {
                 text: qsTr("Береза")
                 onClicked: {
-                    accepted("Береза")
-                    dialog.close()
+                    accepted(breed = "Береза")
+                    close()
                 }
             }
             Button {
                 text: qsTr("Дуб")
                 onClicked: {
-                    accepted("Дуб")
-                    dialog.close()
+                    accepted(breed = "Дуб")
+                    close()
                 }
             }
             Button {
                 text: qsTr("Сосна")
                 onClicked: {
-                    accepted("Сосна")
-                    dialog.close()
+                    accepted(breed = "Сосна")
+                    close()
                 }
             }
             Button {
                 text: qsTr("Ель")
                 onClicked: {
-                    accepted("Ель")
-                    dialog.close()
+                    accepted(breed = "Ель")
+                    close()
                 }
             }
             Button {
                 text: qsTr("Лиственница")
                 onClicked: {
-                    accepted("Лиственница")
-                    dialog.close()
+                    accepted(breed = "Лиственница")
+                    close()
                 }
             }
-        }
-    }
+
+           }
+       }
 }
